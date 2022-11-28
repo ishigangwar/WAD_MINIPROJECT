@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Zen+Antique+Soft&display=swap');
+
+/* Body */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(45, 43, 42);
+}
+
+
+/* Navbar start */
+nav{
+    font-family: 'Zen Antique', serif;
+    background-color: black;
+    color: white;
+}
+
+nav ul{
+    height: 65px;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav ul li{
+    /* padding: top-bottom left-right */
+    padding: 0 12px;  
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight:bolder;
+    font-size: 1.3rem;
+}
+
+.brand img{
+    height: 32px;
+    padding: 0 8px;
+}
+/* Navbar end */
+
+/* SongListContainer start */
+.container{
+    min-height: 61vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.songItem{
+    height: 43px;
+    display: flex;
+    background-color:white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp{
+    margin: 0 25px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+/* SongListContainer end */
+
+/* Bottom song start */
+.bottom{
+    position: sticky;
+    height: 100px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.icons{
+    margin-top: 14px;
+}
+
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* We do not want the gif to play all the time, we want it to play only when the song plays so 
+We do its opactity to 0, and whenever the song plays, we can target it's opacity and increase it to 1 */
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+/* Bottom song end */
